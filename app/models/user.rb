@@ -10,3 +10,4 @@ class User < ActiveRecord::Base
       self.reviews.where(product_id: product.id).destroy_all
   end
 end
+
