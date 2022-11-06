@@ -13,6 +13,6 @@ class Product < ActiveRecord::Base
   end
 
   def average_rating
-      self.reviews.map(&:start_rating).sum.to_f / reviews.size
+    self.reviews.average(:star_rating).to_f
   end
 end
